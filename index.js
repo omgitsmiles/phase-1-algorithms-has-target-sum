@@ -1,13 +1,36 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+  for(let i = 0; i <= array.length; i++) { //TC had -1 at array.length
+   let complementaryNum =  target - array[i]
+    console.log(complementaryNum)
+    for (let j = i + 1; j <= array.length; j++) { // TC had -1 at array.length
+      console.log(array[j])
+      if (array[j] === complementaryNum) {
+        return true
+      }
+    }
+  }
+return false
 }
 
+ // let j = array.length - 1 - i
+// let sumArray = array[i] + array[j]
+    // if (array.includes(complementaryNum)){
+    //   return true
+    //   } else {
+    //     return false
+    //   }
+    // } 
 /* 
   Write the Big O time complexity of your function here
+  O(n2)
 */
 
 /* 
   Add your pseudocode here
+  write a for loop with length divided by 2
+  use another variable to count from the end of array
+  if the sum of each of the numbers === the target
+  return true
 */
 
 /*
